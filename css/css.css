@@ -139,10 +139,10 @@ header .header .logo p {
   font-weight: 700;
   line-height: 0;
 }
-.skobka1 {
+.week .bibli .skobka1 {
   margin-right: 10rem;
 }
-.skobka2 {
+.week .bibli .skobka2 {
   margin-left: 10rem;
 }
 .last_worship {
@@ -156,7 +156,7 @@ header .header .logo p {
   font-weight: 700;
   margin-top: 2rem;
 }
-.last_worship_span:before {
+.last_worship .last_worship_span:before {
   content: "";
   width: 9rem;
   height: 2px;
@@ -165,7 +165,7 @@ header .header .logo p {
   vertical-align: middle;
   margin-right: 4rem;
 }
-.last_worship_span:after {
+.last_worship .last_worship_span:after {
   content: "";
   width: 9rem;
   height: 2px;
@@ -174,35 +174,29 @@ header .header .logo p {
   vertical-align: middle;
   margin-left: 4rem;
 }
-.last_worship_video {
+.last_worship .last_worship_video {
   width: 85%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-top: 5rem;
 }
-.last_worship_video1,
-.last_worship_video2 {
+.last_worship .last_worship_video .last_worship_video1,
+.last_worship .last_worship_video .last_worship_video2 {
   text-align: center;
 }
-.last_worship_video1 iframe,
-.last_worship_video2 iframe {
+.last_worship .last_worship_video .last_worship_video1 iframe,
+.last_worship .last_worship_video .last_worship_video2 iframe {
   width: 448px;
 }
-.last_worship_video span {
+.last_worship .last_worship_video span {
   font-size: 1.6rem;
   font-weight: 700;
 }
-.last_worship_video h3 {
+.last_worship .last_worship_video h3 {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 0;
-}
-.last_news span {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-top: 2rem;
-  text-align: center;
 }
 .last_news {
   width: 80%;
@@ -212,12 +206,18 @@ header .header .logo p {
   flex-direction: column;
   justify-content: space-between;
 }
-.last_news_mini {
+.last_news span {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  text-align: center;
+}
+.last_news .last_news_mini {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
 }
-.last_news_mikro {
+.last_news .last_news_mini .last_news_mikro {
   position: relative;
   width: 44rem;
   height: 25rem;
@@ -225,13 +225,13 @@ header .header .logo p {
   background: #F1F1F1;
   border-radius: 5px;
 }
-.last_news_mikro img {
+.last_news .last_news_mini .last_news_mikro img {
   float: left;
   margin-top: 1.8rem;
   margin-left: 2rem;
   width: 21rem;
 }
-.last_news_mikro p {
+.last_news .last_news_mini .last_news_mikro p {
   padding: 8px 9px;
   background: #fff;
   display: inline-block;
@@ -245,14 +245,14 @@ header .header .logo p {
   width: 21rem;
   box-shadow: 1px 1px 5px #888;
 }
-.last_news_mikro span {
+.last_news .last_news_mini .last_news_mikro span {
   font-size: 1.3rem;
   font-weight: 700;
   position: absolute;
   display: inline-block;
   margin: 14rem 5rem;
 }
-.last_news_mikro button {
+.last_news .last_news_mini .last_news_mikro button {
   font-size: 1.6rem;
   width: 14rem;
   height: 4rem;
@@ -267,10 +267,10 @@ header .header .logo p {
   cursor: pointer;
   box-shadow: 2px 3px 6px 2px #D6D6D6;
 }
-.last_news_mikro button:active {
+.last_news .last_news_mini .last_news_mikro button:active {
   box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 0 15px 5px rgba(105, 105, 105, 0.3);
 }
-.more_news {
+.last_news .more_news {
   width: 16rem;
   height: 4.5rem;
   font-size: 1.5rem;
@@ -285,7 +285,7 @@ header .header .logo p {
   cursor: pointer;
   box-shadow: 1px 2px 6px 2px #D6D6D6;
 }
-.more_news:active {
+.last_news .more_news:active {
   box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 0 15px 5px rgba(105, 105, 105, 0.3);
 }
 .worship {
@@ -293,14 +293,6 @@ header .header .logo p {
   min-height: 50rem;
   display: flex;
   flex-direction: column;
-}
-.worship_div1,
-.worship_div2 {
-  width: 75%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 4rem;
 }
 .worship_div3 {
   width: 30%;
