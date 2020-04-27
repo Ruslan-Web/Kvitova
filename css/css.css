@@ -78,6 +78,50 @@ header .header .logo p {
   font-size: 1.6rem;
   color: black;
 }
+.menu nav .last_991 {
+  display: none;
+}
+.menu .m-menu-link {
+  display: none;
+  color: #F6BD28;
+  font-size: 3.7rem;
+  margin-right: 5rem;
+}
+.m-menu {
+  margin: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 90vh;
+  width: 100%;
+  list-style: none;
+  background-color: #6e45e2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+  transition: 0.2s;
+  transform: translateX(100%);
+}
+.m-menu a {
+  font-size: 4rem;
+  line-height: 9rem;
+}
+.m-menu .close-menu {
+  position: fixed;
+  right: 4rem;
+  top: 2rem;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fff;
+}
+.m-menu .close-menu:hover {
+  cursor: pointer;
+}
+.m-menu_activ {
+  transform: translateX(0%);
+}
 .last {
   background: #F9BD28;
   width: 31rem;
@@ -294,7 +338,15 @@ header .header .logo p {
   display: flex;
   flex-direction: column;
 }
-.worship_div3 {
+.worship .worship_div1,
+.worship .worship_div2 {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+.worship .worship_div3 {
   width: 30%;
   margin: 0 auto;
   display: flex;
@@ -302,7 +354,7 @@ header .header .logo p {
   margin-top: 4rem;
   margin-bottom: 3rem;
 }
-.button_mini {
+.worship .button_mini {
   width: 12rem;
   height: 12rem;
   text-align: center;
@@ -315,16 +367,16 @@ header .header .logo p {
   outline: none;
   cursor: pointer;
 }
-.button_mini:hover {
+.worship .button_mini:hover {
   box-shadow: 0px 0px 20px 1px #999;
 }
-.button_mini:active {
+.worship .button_mini:active {
   box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 0 15px 5px rgba(105, 105, 105, 0.3);
 }
-.button_mini img {
+.worship .button_mini img {
   margin-top: 1rem;
 }
-.button_mini h3 {
+.worship .button_mini h3 {
   margin: 0;
 }
 .worship span {
@@ -334,13 +386,17 @@ header .header .logo p {
   padding-top: 2rem;
   margin: 0 auto;
 }
+.worship .new_worship_div1,
+.worship .new_worship_div2 {
+  display: none;
+}
 .article {
   min-height: 42rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.articles1 {
+.article .articles1 {
   width: 47rem;
   height: 26rem;
   background: url("/img/888.jpg");
@@ -349,7 +405,7 @@ header .header .logo p {
   margin-right: 1rem;
   display: flex;
 }
-.articles2 {
+.article .articles2 {
   width: 47rem;
   height: 26rem;
   background: url("/img/999.jpg");
@@ -358,8 +414,7 @@ header .header .logo p {
   margin-left: 1rem;
   display: flex;
 }
-.articles2 .mini_button,
-.articles1 .mini_button {
+.article .mini_button {
   position: absolute;
   width: 100%;
   height: 6rem;
@@ -372,7 +427,7 @@ header .header .logo p {
   color: #fff;
   font-size: 1.6rem;
 }
-.wrap_button {
+.article .wrap_button {
   width: 100%;
   height: 100%;
   background: url(0,0,0,0);
@@ -393,7 +448,7 @@ header .header .logo p {
   padding-top: 2rem;
   margin: 0 auto;
 }
-.good_link_wrap {
+.good_link .good_link_wrap {
   display: flex;
   justify-content: space-between;
   width: 55%;
@@ -401,11 +456,18 @@ header .header .logo p {
   margin: 0 auto;
   padding-bottom: 5rem;
 }
-.good_link_wrap p {
+.good_link .good_link_wrap p {
   font-size: 1.4rem;
   font-weight: 700;
 }
-.good_link_mini button {
+.good_link .good_link_wrap .good_link_mini {
+  text-align: center;
+  width: 14.5rem;
+  min-height: 20rem;
+  border: 1px solid transparent;
+  position: relative;
+}
+.good_link .good_link_wrap .good_link_mini button {
   font-size: 1.6rem;
   width: 14rem;
   height: 3.8rem;
@@ -420,33 +482,26 @@ header .header .logo p {
   cursor: pointer;
   box-shadow: 1px 2px 6px 2px #D6D6D6;
 }
-.good_link_mini button:active {
+.good_link .good_link_wrap .good_link_mini button:active {
   box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 0 15px 5px rgba(105, 105, 105, 0.3);
-}
-.good_link_mini {
-  text-align: center;
-  width: 14.5rem;
-  min-height: 20rem;
-  border: 1px solid transparent;
-  position: relative;
 }
 footer {
   min-height: 40rem;
   background: #171717;
 }
-.footer_one {
+footer .footer_one {
   background: #000;
   height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.footer_one p {
+footer .footer_one p {
   color: #fff;
   font-size: 2.2rem;
   font-weight: 800;
 }
-.routine {
+footer .routine {
   display: flex;
   justify-content: space-between;
   /* border:2px solid red; */
@@ -454,24 +509,24 @@ footer {
   margin: 0 auto;
   margin-top: 4rem;
 }
-.routine_mini {
+footer .routine .routine_mini {
   width: 20rem;
   height: 7rem;
   text-align: center;
 }
-.routine_mini span {
+footer .routine .routine_mini span {
   padding: 6px 25px;
   color: #fff;
   font-size: 1.6rem;
   font-weight: 800;
   border-bottom: 2px solid #F6BD28;
 }
-.routine_mini p {
+footer .routine .routine_mini p {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 700;
 }
-.adress {
+footer .adress {
   width: 26rem;
   height: 20rem;
   display: flex;
@@ -480,21 +535,21 @@ footer {
   margin: 0 auto;
   margin-top: 4rem;
 }
-.adress span {
+footer .adress span {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 17px;
 }
-.adress a {
+footer .adress a {
   color: #fff;
   font-size: 2rem;
   text-decoration: none;
   font-weight: 800;
   margin-top: 1rem;
 }
-.adress button {
+footer .adress button {
   font-size: 1.6rem;
   width: 23rem;
   height: 4rem;
@@ -508,72 +563,24 @@ footer {
   cursor: pointer;
   padding: 10px 10px;
 }
-.adress button:active {
+footer .adress button:active {
   box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 0 15px 5px rgba(105, 105, 105, 0.3);
 }
-.footer_social {
+footer .adress .footer_social {
   margin-top: 1.5rem;
 }
-.footer_social img {
+footer .adress .footer_social img {
   margin-left: 8px;
 }
-.footers {
+footer .footers {
   height: 3rem;
   background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.footers p {
+footer .footers p {
   font-size: 1.6rem;
   color: #6C6C6C;
   font-weight: 600;
-}
-.m-menu-link {
-  display: none;
-  color: #F6BD28;
-  font-size: 3.7rem;
-  margin-right: 5rem;
-}
-.last_991 {
-  display: none;
-}
-.new_worship_div1,
-.new_worship_div2 {
-  display: none;
-}
-.m-menu {
-  margin: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 90vh;
-  width: 100%;
-  list-style: none;
-  background-color: #6e45e2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 9;
-  transition: 0.2s;
-  transform: translateX(100%);
-}
-.m-menu a {
-  font-size: 4rem;
-  line-height: 9rem;
-}
-.m-menu_activ {
-  transform: translateX(0%);
-}
-.close-menu {
-  position: fixed;
-  right: 4rem;
-  top: 2rem;
-  font-size: 5rem;
-  font-weight: 900;
-  color: #fff;
-}
-.close-menu:hover {
-  cursor: pointer;
 }
