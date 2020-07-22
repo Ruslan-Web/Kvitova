@@ -19,7 +19,7 @@ header .header {
   background: #fff;
   display: flex;
   align-items: center;
-  width: 85%;
+  width: 60%;
   text-align: center;
   margin: 0 auto;
 }
@@ -52,10 +52,10 @@ header .header .logo p {
   font-weight: 600;
   margin: 0;
 }
-.social {
-  margin-left: -5rem;
+header .header .social {
+  margin-left: -9rem;
 }
-.social img {
+header .header .social img {
   margin-left: 0.5rem;
 }
 .menu {
@@ -339,21 +339,12 @@ header .header .logo p {
   display: flex;
   flex-direction: column;
 }
-.worship .worship_div1,
-.worship .worship_div2 {
-  width: 75%;
+.worship .worship_div {
+  width: 60%;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 4rem;
-}
-.worship .worship_div3 {
-  width: 30%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 4rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .worship .button_mini {
   width: 12rem;
@@ -367,6 +358,8 @@ header .header .logo p {
   border: none;
   outline: none;
   cursor: pointer;
+  margin-top: 4rem;
+  justify-self: center;
 }
 .worship .button_mini:hover {
   box-shadow: 0px 0px 20px 1px #999;
@@ -393,18 +386,15 @@ header .header .logo p {
 }
 .article {
   min-height: 42rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5rem;
   align-items: center;
-  justify-content: center;
 }
 .article .articles1 {
   width: 47rem;
   height: 26rem;
-  /*background: url("img/888.jpg");*/
-  background-size: cover;
-  position: relative;
-  margin-right: 1rem;
-  display: flex;
+  justify-self: end;
 }
 .article .articles1 img {
   width: 100%;
@@ -413,11 +403,7 @@ header .header .logo p {
 .article .articles2 {
   width: 47rem;
   height: 26rem;
-  /* background: url("img/999.jpg");*/
-  background-size: cover;
-  position: relative;
-  margin-left: 1rem;
-  display: flex;
+  justify-self: start;
 }
 .article .articles2 img {
   width: 100%;
