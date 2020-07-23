@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <title>Document</title>
-  <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" /> -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
   <!-- <link rel="stylesheet" type="text/css" href="css/main.css" /> -->
-  
+
   <link rel="stylesheet" type="text/css" href="css/css.css" />
   <link rel="stylesheet" type="text/css" href="css/media.css" />
 
@@ -19,15 +19,11 @@
 </head>
 
 <body>
-  <!-- <ul class="m-menu">
-      <li class="close-menu">&times;</li>
-      <li><a href="#" class="menu-link">Home</a></li>
-      <li><a href="#" class="menu-link">Why MISOCIAL</a></li>
-      <li><a href="#" class="menu-link"> Features</a></li>
-      <li><a href="#" class="menu-link"> Articles</a></li>
-      <li><a href="#" class="menu-link"> Pricing</a></li>
-      <li><a href="#" class="menu-link get-started-btn">get started</a></li>
-    </ul> -->
+  <ul class="m-menu">
+    <li><a href="#" class="menu-link">Головна</a></li>
+    <li><a href="#" class="menu-link">Новини</a></li>
+    <li><a href="#" class="menu-link"> Контакти</a></li>
+  </ul>
   <header>
     <div class="header">
       <div class="logo">
@@ -42,26 +38,32 @@
         <a href="#"><img src="img/instagram.png" alt="" /></a>
       </div>
     </div>
-    <!-- <div class="menu">
-        <nav>
-          <ul>
-            <li><a href="#">Головна</a></li>
-            <li><a href="#">Фото</a></li>
-            <li><a href="#">Відео</a></li>
-            <li><a href="#">Служіння</a></li>
-            <li><a href="#">Контакти</a></li>
-            <button class="last_991">
+    <div class="menu">
+      <nav>
+        <ul>
+          <li><a href="#">Головна</a></li>
+          <li><a href="#">Новини</a></li>
+          <li><a href="#">Контакти</a></li>
+          <!-- <button class="last_991">
               ТРАНСЛЯЦІЯ<span class="last_div_991">наживо</span>
-            </button>
-            <button class="last">
+            </button> -->
+          <!-- <button class="last">
               ОНЛАЙН ТРАНСЛЯЦІЯ<span class="last_div">наживо</span>
-            </button>
-          </ul>
-        </nav>
-        <a href="#" class="m-menu-link">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div> -->
+            </button> -->
+          <li class="last_li">
+            <a href="#" class="last">ОНЛАЙН ТРАНСЛЯЦІЯ
+              <span class="last_div">
+                наживо
+              </span>
+            </a>
+          </li>
+          <a href="#" class="m-menu-link">
+            <i class="fa fa-bars"></i>
+          </a>
+        </ul>
+      </nav>
+
+    </div>
   </header>
 
   <section class="week" style="background-image: url(img/bibli.jpg);">
@@ -287,26 +289,19 @@
       <p>Copyright 2019 Kvitova</p>
     </div>
   </footer>
-  <!-- <script
-      src="/js/jquery-2.2.4.min.js"
-      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      $(function () {
-        var link = $(".m-menu-link");
-        var close = $(".close-menu");
-        var menu = $(".m-menu");
-        link.on("click", function (event) {
-          event.preventDefault();
-          menu.toggleClass("m-menu_activ");
-        });
-        close.on("click", function (event) {
-          event.preventDefault();
-          menu.toggleClass("m-menu_activ");
-        });
-      });
-    </script> -->
+  <script>
+    let menu = document.querySelector('.m-menu');
+    let click = false;
+    document.querySelector('.fa-bars').addEventListener('click', function () {
+      if (!click) {
+        menu.style.display = 'flex';
+        click = true;
+      } else {
+        menu.style.display = 'none';
+        click = false;
+      }
+    })
+  </script>
 </body>
 
 </html>

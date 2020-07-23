@@ -16,7 +16,7 @@ header {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  
+
   .header {
     height: 13rem;
     background: #fff;
@@ -25,11 +25,11 @@ header {
     width: 60%;
     text-align: center;
     margin: 0 auto;
-    
+
     .logo {
       text-align: center;
       margin: 0 auto;
-      
+
       img {
         margin-top: 1rem;
         width: 19rem;
@@ -59,9 +59,10 @@ header {
         margin: 0;
       }
     }
+
     .social {
       margin-left: -9rem;
-    
+
       img {
         margin-left: 0.5rem;
       }
@@ -75,8 +76,14 @@ header {
   display: flex;
   align-items: center;
 
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 5fr 0.5fr;
+    align-items: center;
+  }
+
   nav {
-    width: 82%;
+    width: 65%;
     margin: 0 auto;
 
     li {
@@ -89,15 +96,20 @@ header {
       text-decoration: none;
       font-size: 1.6rem;
       color: black;
+      font-weight: 700;
     }
 
     .last_991 {
       display: none;
     }
+
+    .last_li {
+      justify-self: right;
+    }
   }
 
   .m-menu-link {
-    display: none;
+    grid-column-start: 5;
     color: #F6BD28;
     font-size: 3.7rem;
     margin-right: 5rem;
@@ -108,18 +120,20 @@ header {
   margin: 0;
   position: fixed;
   right: 0;
-  top: 0;
-  height: 90vh;
-  width: 100%;
+  left: 0;
+  top: 18rem;
+  height: 30rem;
+  //width:20rem;
   list-style: none;
-  background-color: #6e45e2;
-  display: flex;
+  background-color: #000;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 9;
   transition: 0.2s;
-  transform: translateX(100%);
+  //transform: translateX(100%);
+  border-bottom: 5px solid #F6BD28;
 
   a {
     font-size: 4rem;
@@ -138,6 +152,12 @@ header {
       cursor: pointer;
     }
   }
+
+  .menu-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3.5rem;
+  }
 }
 
 .m-menu_activ {
@@ -149,14 +169,16 @@ header {
   width: 31rem;
   height: 3.5rem;
   border-radius: 5px;
-  margin-left: 5.5rem;
+  //margin-left: 5.5rem;
   font-weight: 500;
   color: #444;
   letter-spacing: 1px;
   font-size: 1.6rem;
   outline: none;
   border: none;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:active {
     box-shadow: 0px 0px 10px 0px #F9BD28;

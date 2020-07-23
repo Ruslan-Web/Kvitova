@@ -69,7 +69,83 @@ header {
         }
     }
 }
-
+.menu {
+    height: 5rem;
+    background: #E9E9E9;
+    display: flex;
+    align-items: center;
+  
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 5fr;
+      align-items: center;
+    }
+  
+    nav {
+      width: 65%;
+      margin: 0 auto;
+  
+      li {
+        display: inline-block;
+        list-style: none;
+        margin-left: 5rem;
+      }
+  
+      a {
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: black;
+        font-weight: 700;
+      }
+  
+      .last_991 {
+        display: none;
+      }
+  
+      .last_li {
+        justify-self: right;
+      }
+    }
+  
+    .m-menu-link {
+      display: none;
+      color: #F6BD28;
+      font-size: 3.7rem;
+      margin-right: 5rem;
+    }
+  }
+  .last {
+    background: #F9BD28;
+    width: 31rem;
+    height: 3.5rem;
+    border-radius: 5px;
+    //margin-left: 5.5rem;
+    font-weight: 500;
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    &:active {
+      box-shadow: 0px 0px 10px 0px #F9BD28;
+    }
+  }
+  
+  .last_div {
+    background: #D92A16;
+    font-size: 1.4rem;
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
+  
 .bag_photo {
     height: 12rem;
     background: #F6BD28;
