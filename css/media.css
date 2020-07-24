@@ -1,13 +1,13 @@
 @media (max-width: 1199px) {
-	html {
-		font-size: 8.5px;
-	}
+	/*html {*/
+		/*font-size: 8.5px;*/
+	/*}*/
 
-	.worship_div {
-		width: 40% !important;
-		grid-template-columns: 1fr 1fr !important;
+	/*.worship_div {*/
+		/*width: 40% !important;*/
+		/*grid-template-columns: 1fr 1fr !important;*/
 
-	}
+	/*}*/
 
 	.last_div {
 		padding: 2px 5px;
@@ -259,11 +259,11 @@
 }
 
 @media (max-width: 791px) {
-	.worship_div {
-		width: 60% !important;
-		grid-template-columns: 1fr 1fr !important;
+	/*.worship_div {*/
+		/*width: 60% !important;*/
+		/*grid-template-columns: 1fr 1fr !important;*/
 
-	}
+	/*}*/
 
 	.last_worship_video1 iframe,
 	.last_worship_video2 iframe {

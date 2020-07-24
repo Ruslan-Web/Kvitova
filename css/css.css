@@ -380,11 +380,8 @@ header .header .social img {
   flex-direction: column;
 }
 .worship .worship_div {
-  width: 60%;
-  margin: 0 auto;
   margin-bottom: 4rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
 }
 .worship .button_mini {
   width: 12rem;
@@ -399,7 +396,8 @@ header .header .social img {
   outline: none;
   cursor: pointer;
   margin-top: 4rem;
-  justify-self: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 .worship .button_mini:hover {
   box-shadow: 0px 0px 20px 1px #999;
@@ -620,4 +618,14 @@ footer .footers p {
   font-size: 1.6rem;
   color: #6C6C6C;
   font-weight: 600;
+}
+@media (max-width: 979px) {
+  .content {
+    width: 500px;
+    margin: 0 auto;
+    font-size: 8.5px;
+  }
+  html header {
+    font-size: 8.5px;
+  }
 }
