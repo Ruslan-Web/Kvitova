@@ -9,6 +9,31 @@ html {
 * {
   box-sizing: border-box;
 }
+.content {
+  width: 980px;
+  margin: 0 auto;
+}
+section .content .title {
+  text-align: center;
+}
+section .content .title:before {
+  content: "";
+  width: 9rem;
+  height: 2px;
+  background: #F9BD28;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4rem;
+}
+section .content .title:after {
+  content: "";
+  width: 9rem;
+  height: 2px;
+  background: #F9BD28;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4rem;
+}
 header {
   display: flex;
   justify-content: space-between;

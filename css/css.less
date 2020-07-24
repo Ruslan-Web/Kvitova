@@ -12,6 +12,50 @@ html {
   box-sizing: border-box;
 }
 
+// переміні
+//mob = 320
+//plansh = 768    500
+//desk = 1200   980
+@content: 980px;
+
+// Згальні контент
+.content {
+  width: @content;
+  margin: 0 auto;
+}
+
+
+//Заголовок до кожної секції
+._title_section() {
+  & {
+    text-align: center;
+  }
+  &:before {
+    content: "";
+    width: 9rem;
+    height: 2px;
+    background: #F9BD28;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4rem;
+  }
+
+  &:after {
+    content: "";
+    width: 9rem;
+    height: 2px;
+    background: #F9BD28;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4rem;
+  }
+}
+
+section .content .title {
+  ._title_section;
+}
+
+
 header {
   display: flex;
   justify-content: space-between;
