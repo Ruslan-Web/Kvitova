@@ -12,53 +12,6 @@ html {
   box-sizing: border-box;
 }
 
-// переміні
-//mob = 320
-//plansh = 768    500
-//desk = 1200   980
-
-@content: 980px;
-@content_tab: 500px;
-@content_mob: 320px;
-
-// Згальні контент
-.content {
-  width: @content;
-  margin: 0 auto;
-}
-
-
-//Заголовок до кожної секції
-._title_section() {
-  & {
-    text-align: center;
-  }
-  &:before {
-    content: "";
-    width: 9rem;
-    height: 2px;
-    background: #F9BD28;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 4rem;
-  }
-
-  &:after {
-    content: "";
-    width: 9rem;
-    height: 2px;
-    background: #F9BD28;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 4rem;
-  }
-}
-
-section .content .title {
-  ._title_section;
-}
-
-
 header {
   display: flex;
   justify-content: space-between;
@@ -463,12 +416,11 @@ header {
   flex-direction: column;
 
   .worship_div {
-    //width: 60%;
-    //margin: 0 auto;
+    width: 60%;
+    margin: 0 auto;
     margin-bottom: 4rem;
-    //display: grid;
-    //grid-template-columns: 1fr 1fr 1fr 1fr;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
   }
 
@@ -485,10 +437,7 @@ header {
     outline: none;
     cursor: pointer;
     margin-top: 4rem;
-    //justify-self: center;
-    margin-left: 3rem;
-    margin-right: 3rem;
-
+    justify-self: center;
 
     &:hover {
       box-shadow: 0px 0px 20px 1px #999;
@@ -766,23 +715,4 @@ footer {
   }
 }
 
-
-
-//---- MEDIA
-//---- MEDIA
-//---- MEDIA
-
-
-@media (max-width: (@content)-1px ) {
-  .content {
-    width: @content_tab;
-    margin: 0 auto;
-    font-size: 8.5px;
-  }
-  html header {
-    font-size: 8.5px;
-  }
-
-}
-
-//---- MEDIA END
+//****************************************
