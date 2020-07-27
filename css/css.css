@@ -47,7 +47,7 @@ header .header {
   background: #fff;
   display: flex;
   align-items: center;
-  width: 980px;
+  width: 60%;
   text-align: center;
   margin: 0 auto;
 }
@@ -81,59 +81,109 @@ header .header .logo p {
   margin: 0;
 }
 header .header .social {
-  margin-left: -12rem;
+  margin-left: -9rem;
 }
 header .header .social img {
   margin-left: 0.5rem;
 }
-header .menu {
+.menu {
   height: 5rem;
-  background: #e9e9e9;
+  background: #E9E9E9;
   display: flex;
   align-items: center;
 }
-header .menu nav {
-  width: 980px;
-  margin: 0 auto;
-}
-header .menu nav ul {
+.menu ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 5fr 0.5fr;
   align-items: center;
-  justify-items: right;
-  width: 100%;
-  padding-left: 0;
 }
-header .menu nav ul li {
-  display: grid;
+.menu nav {
+  width: 65%;
+  margin: 0 auto;
+}
+.menu nav li {
+  display: inline-block;
   list-style: none;
+  margin-left: 5rem;
 }
-header .menu nav ul li a {
+.menu nav a {
   text-decoration: none;
   font-size: 1.6rem;
   color: black;
   font-weight: 700;
 }
-header .menu nav ul .last_li {
-  justify-self: flex-end;
-  display: grid;
+.menu nav .last_991 {
+  display: none;
 }
-header .menu nav ul .last_li .last {
-  background: #f9bd28;
+.menu nav .last_li {
+  justify-self: right;
+}
+.menu .m-menu-link {
+  grid-column-start: 5;
+  color: #F6BD28;
+  font-size: 3.7rem;
+  margin-right: 5rem;
+}
+.m-menu {
+  margin: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 18rem;
+  height: 30rem;
+  list-style: none;
+  background-color: #000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+  transition: 0.2s;
+  border-bottom: 5px solid #F6BD28;
+}
+.m-menu a {
+  font-size: 4rem;
+  line-height: 9rem;
+}
+.m-menu .close-menu {
+  position: fixed;
+  right: 4rem;
+  top: 2rem;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fff;
+}
+.m-menu .close-menu:hover {
+  cursor: pointer;
+}
+.m-menu .menu-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 3.5rem;
+}
+.m-menu_activ {
+  transform: translateX(0%);
+}
+.last {
+  background: #F9BD28;
   width: 31rem;
   height: 3.5rem;
   border-radius: 5px;
+  font-weight: 500;
+  color: #444;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
   outline: none;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-header .menu nav ul .last_li .last:active {
-  box-shadow: 0px 0px 10px 0px #f9bd28;
+.last:active {
+  box-shadow: 0px 0px 10px 0px #F9BD28;
 }
-header .menu nav ul .last_li .last .last_div {
-  background: #d92a16;
+.last_div {
+  background: #D92A16;
   font-size: 1.4rem;
   padding: 2px 10px;
   border-radius: 5px;
@@ -142,33 +192,6 @@ header .menu nav ul .last_li .last .last_div {
   margin-left: 10px;
   text-transform: uppercase;
 }
-header .menu nav ul .m-menu-link {
-  grid-column-start: 5;
-  display: none;
-  color: #f6bd28;
-  font-size: 3.7rem;
-}
-.m-menu {
-  padding-left: 0;
-  margin: 0;
-  position: fixed;
-  width: 100%;
-  top: 18rem;
-  height: 30rem;
-  background-color: #000;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 9;
-  border-bottom: 5px solid #f6bd28;
-}
-.m-menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 3.5rem;
-  line-height: 8rem;
-}
 .week {
   background: no-repeat center;
   background-size: cover;
@@ -176,7 +199,7 @@ header .menu nav ul .m-menu-link {
   box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, 0.6);
 }
 .week .bibli {
-  width: 980px;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -184,10 +207,11 @@ header .menu nav ul .m-menu-link {
 }
 .week .bibli .text_bibli {
   text-align: center;
+  width: 60%;
 }
 .week .bibli .text_bibli h2 {
   font-size: 2.2rem;
-  color: #f9bd28;
+  color: #F9BD28;
   font-weight: 400;
   line-height: 0;
 }
@@ -199,7 +223,7 @@ header .menu nav ul .m-menu-link {
 }
 .week .bibli .text_bibli h3 {
   font-size: 1.6rem;
-  color: #f9bd28;
+  color: #F9BD28;
   font-weight: 700;
   line-height: 0;
 }
@@ -224,7 +248,7 @@ header .menu nav ul .m-menu-link {
   content: "";
   width: 9rem;
   height: 2px;
-  background: #f9bd28;
+  background: #F9BD28;
   display: inline-block;
   vertical-align: middle;
   margin-right: 4rem;
@@ -233,7 +257,7 @@ header .menu nav ul .m-menu-link {
   content: "";
   width: 9rem;
   height: 2px;
-  background: #f9bd28;
+  background: #F9BD28;
   display: inline-block;
   vertical-align: middle;
   margin-left: 4rem;
@@ -286,7 +310,7 @@ header .menu nav ul .m-menu-link {
   width: 44rem;
   height: 25rem;
   margin-left: 2rem;
-  background: #f1f1f1;
+  background: #F1F1F1;
   border-radius: 5px;
 }
 .last_news .last_news_mini .last_news_mikro img {
@@ -320,7 +344,7 @@ header .menu nav ul .m-menu-link {
   font-size: 1.6rem;
   width: 14rem;
   height: 4rem;
-  background: #f6bd28;
+  background: #F6BD28;
   border: none;
   border-radius: 5px;
   font-weight: 700;
@@ -329,7 +353,7 @@ header .menu nav ul .m-menu-link {
   margin: 19.5rem 4rem;
   outline: none;
   cursor: pointer;
-  box-shadow: 2px 3px 6px 2px #d6d6d6;
+  box-shadow: 2px 3px 6px 2px #D6D6D6;
 }
 .last_news .last_news_mini .last_news_mikro button:active {
   box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 0 15px 5px rgba(105, 105, 105, 0.3);
@@ -338,7 +362,7 @@ header .menu nav ul .m-menu-link {
   width: 16rem;
   height: 4.5rem;
   font-size: 1.5rem;
-  border: 2px solid #f6bd28;
+  border: 2px solid #F6BD28;
   border-radius: 7px;
   font-weight: 700;
   background: transparent;
@@ -347,13 +371,13 @@ header .menu nav ul .m-menu-link {
   margin-top: 3rem;
   outline: none;
   cursor: pointer;
-  box-shadow: 1px 2px 6px 2px #d6d6d6;
+  box-shadow: 1px 2px 6px 2px #D6D6D6;
 }
 .last_news .more_news:active {
   box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 0 15px 5px rgba(105, 105, 105, 0.3);
 }
 .worship {
-  background: #f1f1f1;
+  background: #F1F1F1;
   min-height: 50rem;
   display: flex;
   flex-direction: column;
@@ -371,7 +395,7 @@ header .menu nav ul .m-menu-link {
   text-align: center;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 3px 6px 2px #d6d6d6;
+  box-shadow: 0 3px 6px 2px #D6D6D6;
   font-size: 1.3rem;
   font-weight: 600;
   border: none;
@@ -437,7 +461,7 @@ header .menu nav ul .m-menu-link {
   bottom: 0;
   border: none;
   outline: none;
-  border-top: 2px solid #f6bd28;
+  border-top: 2px solid #F6BD28;
   color: #fff;
   font-size: 1.8rem;
   align-items: center;
@@ -446,13 +470,15 @@ header .menu nav ul .m-menu-link {
 .article .wrap_button {
   width: 100%;
   height: 100%;
+  background: url(0,0,0,0);
   border: none;
   outline: none;
+  cursor: pointer;
   z-index: 10;
 }
 .good_link {
   min-height: 33rem;
-  background: #f1f1f1;
+  background: #F1F1F1;
   display: flex;
   flex-direction: column;
 }
@@ -485,7 +511,7 @@ header .menu nav ul .m-menu-link {
   font-size: 1.6rem;
   width: 14rem;
   height: 3.8rem;
-  background: #f6bd28;
+  background: #F6BD28;
   border: none;
   border-radius: 5px;
   font-weight: 700;
@@ -494,7 +520,7 @@ header .menu nav ul .m-menu-link {
   position: absolute;
   outline: none;
   cursor: pointer;
-  box-shadow: 1px 2px 6px 2px #d6d6d6;
+  box-shadow: 1px 2px 6px 2px #D6D6D6;
 }
 .good_link .good_link_wrap .good_link_mini button:active {
   box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 0 15px 5px rgba(105, 105, 105, 0.3);
@@ -533,7 +559,7 @@ footer .routine .routine_mini span {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 800;
-  border-bottom: 2px solid #f6bd28;
+  border-bottom: 2px solid #F6BD28;
 }
 footer .routine .routine_mini p {
   color: #fff;
@@ -567,7 +593,7 @@ footer .adress button {
   font-size: 1.6rem;
   width: 23rem;
   height: 4rem;
-  background: #f6bd28;
+  background: #F6BD28;
   border: none;
   border-radius: 5px;
   font-weight: 700;
@@ -595,7 +621,7 @@ footer .footers {
 }
 footer .footers p {
   font-size: 1.6rem;
-  color: #6c6c6c;
+  color: #6C6C6C;
   font-weight: 600;
 }
 @media (max-width: 980px) {
