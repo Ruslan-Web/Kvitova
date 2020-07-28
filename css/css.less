@@ -301,7 +301,6 @@ header {
   }
 
   .last_worship_video {
-    width: 85%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -309,17 +308,45 @@ header {
 
     .last_worship_video1,
     .last_worship_video2 {
+      margin-bottom: 3rem;
+      text-decoration: none;
       text-align: center;
+      width: 45rem;
+      position: relative;
+
+      .last_worship_img {
+        width: 100%;
+      }
+      .span_mask {
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.52);
+        z-index: 99;
+        top: 7rem;
+        left: 17rem;
+        margin: 0;
+
+        img {
+          width: 7rem;
+          height: 7rem;
+        }
+      }
     }
 
-    .last_worship_video1 iframe,
-    .last_worship_video2 iframe {
-      width: 448px;
-    }
-
-    span {
+    .wrap_span {
+      color: #000;
       font-size: 1.6rem;
-      font-weight: 700;
+      font-weight: 500;
+      span {
+        color: #000;
+        font-size: 1.6rem;
+        font-weight: 900;
+      }
     }
 
     h3 {
@@ -331,8 +358,7 @@ header {
 }
 
 .last_news {
-  width: 80%;
-  margin: 0 auto;
+  // border: 2px solid red;
   min-height: 65rem;
   display: flex;
   flex-direction: column;
@@ -346,15 +372,17 @@ header {
   }
 
   .last_news_mini {
+    margin: 0 auto;
+    // border: 2px solid red;
     margin-top: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 
     .last_news_mikro {
+      // border: 2px solid red;
       position: relative;
       width: 44rem;
       height: 25rem;
-      margin-left: 2rem;
       background: #f1f1f1;
       border-radius: 5px;
 
@@ -388,8 +416,10 @@ header {
         margin: 14rem 5rem;
       }
 
-      button {
+      a {
         font-size: 1.6rem;
+        text-align: center;
+        padding-top: 0.8rem;
         width: 14rem;
         height: 4rem;
         background: #f6bd28;
@@ -400,7 +430,6 @@ header {
         position: absolute;
         margin: 19.5rem 4rem;
         outline: none;
-        cursor: pointer;
         box-shadow: 2px 3px 6px 2px #d6d6d6;
 
         &:active {
@@ -421,11 +450,11 @@ header {
     font-weight: 700;
     background: transparent;
     margin: 0 auto;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
+    margin-bottom: 2rem;
     outline: none;
-    cursor: pointer;
     box-shadow: 1px 2px 6px 2px #d6d6d6;
+    text-align: center;
+    padding-top: 1rem;
 
     &:active {
       box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1),
@@ -805,37 +834,32 @@ footer {
     .last_worship_video {
       width: 85%;
       flex-direction: column;
-      .last_worship_video1 iframe,
-      .last_worship_video2 iframe {
-        width: 380px;
-        height: 210px;
-      }
+    }
+    .last_worship_span:before {
+      content: "";
+      width: 0rem !important;
+      height: 0px !important;
+    }
 
-      .last_worship_video1 iframe,
-      .last_worship_video2 iframe {
-        width: 490px;
-        height: 260px;
-      }
-
-      .last_worship_video2 iframe {
-        margin-top: 5rem;
-      }
+    .last_worship_span:after {
+      content: "";
+      width: 0rem !important;
+      height: 0px !important;
     }
   }
 
   .last_news {
-    width: 90%;
     .last_news_mini2 {
-      display: none;
+      display: none !important;
     }
     .last_news_mini {
       flex-direction: column;
       margin: 0 auto;
-      margin-top: 2rem;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       .last_news_mikro {
-        margin-top: 3rem;
+        margin: 0 auto !important;
+        margin-top: 3rem !important;
         span {
           margin: 16rem 4rem;
         }
@@ -876,11 +900,11 @@ footer {
   .good_link {
     background: none;
     .last_worship_span:before {
-      display: none;
+      display: none !important;
     }
 
     .last_worship_span:after {
-      display: none;
+      display: none !important;
     }
     .good_link_wrap {
       width: 65%;
@@ -922,8 +946,15 @@ footer {
       h1 {
         font-size: 2rem !important;
       }
+      h2 {
+        font-size: 1.6rem !important;
+      }
     }
     .menu {
+      nav {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
       ul {
         display: flex;
         align-items: center;
@@ -942,7 +973,8 @@ footer {
         grid-column-start: 1 !important;
 
         .last {
-          width: 25rem;
+          width: 23rem !important;
+          font-weight: 600 !important;
         }
       }
     }
@@ -953,37 +985,52 @@ footer {
       width: @content_mob !important;
       .text_bibli {
         width: 100% !important;
+        margin-top: 2rem !important;
         h2 {
           font-size: 2rem !important;
+        }
+        p {
+          font-size: 2.4rem !important;
+          line-height: 2.8rem !important;
         }
       }
     }
   }
 
   .last_worship {
-    .last_worship_video1 iframe,
-    .last_worship_video2 iframe {
-      width: 375px !important;
-      height: 220px;
-    }
-    .last_worship_span:before {
-      content: "";
-      width: 0rem !important;
-      height: 0px !important;
-    }
-
-    .last_worship_span:after {
-      content: "";
-      width: 0rem !important;
-      height: 0px !important;
+    .last_worship_video1,
+    .last_worship_video2 {
+      width: 35rem !important;
+      height: 23rem !important;
+      .span_mask {
+        top: 5rem !important;
+        left: 13rem !important;
+      }
     }
   }
-
   .last_news {
     .last_news_mini {
       .last_news_mikro {
-        width: 42rem !important;
-        margin-left: 0rem !important;
+        width: 95% !important;
+        height: 20rem;
+        img {
+          width: 16rem;
+        }
+        p {
+          width: 19rem;
+          line-height: 1.5rem;
+          font-size: 12px;
+        }
+        span {
+          font-size: 8px;
+          margin: 12rem 4.5rem;
+        }
+        a {
+          font-size: 11px;
+          width: 11rem;
+          height: 3.5rem;
+          margin: 14rem 3rem;
+        }
       }
     }
   }
