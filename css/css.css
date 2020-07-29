@@ -98,7 +98,7 @@ header .menu nav {
 }
 header .menu nav ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 5fr 0.5fr;
+  grid-template-columns: 1fr 1fr 1fr 5fr;
   align-items: center;
   justify-items: right;
   width: 100%;
@@ -417,8 +417,10 @@ header .menu nav ul .m-menu-link {
 .worship .button_mini img {
   margin-top: 1rem;
 }
-.worship .button_mini h3 {
-  margin: 0;
+.worship .button_mini span {
+  display: inline-block;
+  margin-top: -1rem;
+  font-size: 1.4rem;
 }
 .worship span {
   display: block;
@@ -600,20 +602,13 @@ footer .footers p {
     display: none;
   }
   .menu ul {
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-    align-items: center;
-    justify-items: left;
-    width: 100%;
-    margin: 0 auto;
+    display: flex !important;
+    justify-content: space-between !important;
   }
   .menu ul li:nth-child(1),
   .menu ul li:nth-child(2),
   .menu ul li:nth-child(3) {
     display: none !important;
-  }
-  .menu ul .last_li {
-    grid-column-start: 1 !important;
   }
   .menu ul .last_li .last_div {
     padding: 2px 5px;
