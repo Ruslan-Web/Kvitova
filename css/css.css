@@ -365,7 +365,7 @@ header .menu nav ul .m-menu-link {
   width: 16rem;
   height: 4.5rem;
   font-size: 1.5rem;
-  border: 2px solid #f6bd28;
+  border: 1px solid #f6bd28;
   border-radius: 7px;
   font-weight: 700;
   background: transparent;
@@ -376,6 +376,8 @@ header .menu nav ul .m-menu-link {
   text-align: center;
   padding-top: 1rem;
   margin-top: 2rem;
+  text-decoration: none;
+  color: #000;
 }
 .last_news .more_news:active {
   box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 0 15px 5px rgba(105, 105, 105, 0.3);
@@ -594,6 +596,80 @@ footer .footers p {
   color: #6c6c6c;
   font-weight: 600;
 }
+.bag_photo {
+  height: 10rem;
+  background: #F6BD28;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bag_photo h1 {
+  font-size: 2.7rem;
+  color: #fff;
+}
+.news {
+  min-height: 875px;
+  background: #F1F1F1;
+  padding-bottom: 5rem;
+}
+.news .news_divs {
+  width: 1345px;
+  margin: 0 auto;
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.news .news_divs .news_div {
+  width: 42rem;
+  height: 32rem;
+  display: flex;
+  text-decoration: none;
+  position: relative;
+  margin-top: 3rem;
+  justify-self: center;
+}
+.news .news_divs .news_div .news_div_text {
+  width: 100%;
+  height: 9.5rem;
+  background: #F6BD28;
+  align-self: flex-end;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.news .news_divs .news_div .news_div_text h2 {
+  line-height: 2.2rem;
+  font-size: 2.1em;
+  color: #000;
+  width: 65%;
+  margin-bottom: 0;
+  margin-top: 2.5rem;
+  align-self: center;
+  font-weight: 600;
+}
+.news .news_divs .news_div .news_div_text p {
+  font-size: 1.7em;
+  color: #fff;
+  margin-top: 1rem;
+  line-height: 1rem;
+}
+.news .news_divs .news_div img {
+  position: absolute;
+  right: 2rem;
+  bottom: 11rem;
+}
+.news .news_divs .news_div .news_div_photo {
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 1345px) {
+  .news_divs {
+    width: 980px !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
 @media (max-width: 980px) {
   .content {
     width: 550px !important;
@@ -705,6 +781,10 @@ footer .footers p {
   footer .routine .routine_mini p {
     font-size: 1.4rem;
   }
+  .news_divs {
+    width: 550px !important;
+    grid-template-columns: 1fr !important;
+  }
 }
 @media (max-width: 550px) {
   html {
@@ -751,8 +831,14 @@ footer .footers p {
     font-size: 2rem !important;
   }
   .week .bibli .text_bibli p {
-    font-size: 2.4rem !important;
+    font-size: 2.1rem !important;
     line-height: 2.8rem !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem !important;
+  }
+  .week .bibli .text_bibli h3 {
+    margin-top: 3rem !important;
   }
   .last_worship .last_worship_video1,
   .last_worship .last_worship_video2 {
@@ -814,5 +900,13 @@ footer .footers p {
   }
   footer .routine .routine_mini p {
     font-size: 1.6rem;
+  }
+  .news_divs {
+    width: 320px !important;
+    grid-template-columns: 1fr !important;
+  }
+  .news_divs .news_div {
+    width: 95% !important;
+    height: 29rem !important;
   }
 }

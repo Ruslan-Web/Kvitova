@@ -317,6 +317,7 @@ header {
       .last_worship_img {
         width: 100%;
       }
+
       .span_mask {
         position: absolute;
         width: 10rem;
@@ -342,6 +343,7 @@ header {
       color: #000;
       font-size: 1.6rem;
       font-weight: 500;
+
       span {
         color: #000;
         font-size: 1.6rem;
@@ -443,7 +445,7 @@ header {
     width: 16rem;
     height: 4.5rem;
     font-size: 1.5rem;
-    border: 2px solid #f6bd28;
+    border: 1px solid #f6bd28;
     border-radius: 7px;
     font-weight: 700;
     background: transparent;
@@ -454,6 +456,8 @@ header {
     text-align: center;
     padding-top: 1rem;
     margin-top: 2rem;
+    text-decoration: none;
+    color: #000;
 
     &:active {
       box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1),
@@ -533,10 +537,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .articles1,
     .articles2 {
       width: 47rem;
       height: 26rem;
+
       img {
         width: 100%;
         height: 100%;
@@ -544,6 +550,7 @@ header {
     }
   }
 }
+
 .good_link {
   min-height: 33rem;
   background: #f1f1f1;
@@ -717,57 +724,155 @@ footer {
   }
 }
 
+
+//---------------------------------НОВИНИ
+
+.bag_photo {
+  height: 10rem;
+  background: #F6BD28;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 2.7rem;
+    color: #fff;
+  }
+}
+
+.news {
+  min-height: 875px;
+  background: #F1F1F1;
+  padding-bottom: 5rem;
+
+  .news_divs {
+    width: 1345px;
+    margin: 0 auto;
+    padding-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .news_div {
+
+      width: 42rem;
+      height: 32rem;
+      display: flex;
+      text-decoration: none;
+      position: relative;
+      margin-top: 3rem;
+      justify-self: center;
+
+      .news_div_text {
+
+        width: 100%;
+        height: 9.5rem;
+        background: #F6BD28;
+        align-self: flex-end;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+
+        h2 {
+          line-height: 2.2rem;
+          font-size: 2.1em;
+          color: #000;
+          width: 65%;
+          margin-bottom: 0;
+          margin-top: 2.5rem;
+          align-self: center;
+          font-weight: 600;
+
+        }
+
+        p {
+
+          font-size: 1.7em;
+          color: #fff;
+          margin-top: 1rem;
+          line-height: 1rem;
+        }
+      }
+
+      img {
+        position: absolute;
+        right: 2rem;
+        bottom: 11rem;
+      }
+
+      .news_div_photo {
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+
+  }
+}
+
+//---------------------------------НОВИНИ КІНЕЦЬ
+
 ////-------------------------------------------------------
+@media (max-width: 1345px) {
+  .news_divs {
+    width: 980px !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
 @media (max-width: 980px) {
-  // html {
-  //   font-size: 8.5px;
-  // }
+
+
   .content {
     width: 550px !important;
   }
+
   .header {
     .social {
       display: none;
     }
   }
+
   .menu {
     ul {
-      // display: grid !important;
-      // grid-template-columns: 5fr 1fr !important;
-      // align-items: center;
-      // justify-items: left;
-      // width: 100%;
-      // margin: 0 auto;
       display: flex !important;
       justify-content: space-between !important;
+
       li {
+
         &:nth-child(1),
         &:nth-child(2),
         &:nth-child(3) {
           display: none !important;
         }
       }
+
       .last_li {
         .last_div {
           padding: 2px 5px;
         }
+
         .last {
           display: none;
         }
       }
+
       .m-menu-link {
         display: inline-block !important;
         display: block;
       }
     }
   }
+
   .week {
     .bibli {
-      width: @content_tab !important;
+      width: @content_tab  !important;
       min-width: 320px;
+
       .skobka {
         display: none;
       }
+
       .text_bibli {
         p {
           font-size: 2.6rem;
@@ -775,11 +880,13 @@ footer {
       }
     }
   }
+
   .last_worship {
     .last_worship_video {
       width: 85%;
       flex-direction: column;
     }
+
     .last_worship_span:before {
       content: "";
       width: 0rem !important;
@@ -797,14 +904,17 @@ footer {
     .last_news_mini2 {
       display: none !important;
     }
+
     .last_news_mini {
       flex-direction: column;
       margin: 0 auto;
       display: flex;
       justify-content: center;
+
       .last_news_mikro {
         margin: 0 auto !important;
         margin-top: 3rem !important;
+
         span {
           margin: 16rem 4rem;
         }
@@ -816,6 +926,7 @@ footer {
     .worship_div {
       width: 40% !important;
       grid-template-columns: 1fr 1fr !important;
+
       .button_mini {
         width: 14rem;
         height: 14rem;
@@ -829,6 +940,7 @@ footer {
       flex-direction: column !important;
       margin-bottom: 3rem;
     }
+
     .articles1,
     .articles2 {
       margin: 0 auto;
@@ -837,8 +949,10 @@ footer {
       margin-top: 4rem;
     }
   }
+
   .good_link {
     background: none;
+
     .last_worship_span:before {
       display: none !important;
     }
@@ -846,27 +960,40 @@ footer {
     .last_worship_span:after {
       display: none !important;
     }
+
     .good_link_wrap {
       div {
         margin: 0 auto;
+
         &:first-child {
           margin-top: 0;
         }
       }
     }
   }
+
   footer {
     .routine {
       margin: 0 auto;
+
       .routine_mini {
         margin: 0 auto;
         margin-top: 5rem;
+
         p {
           font-size: 1.4rem;
         }
       }
     }
   }
+
+  //------НОВИНИ
+  .news_divs {
+    width: 550px !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  //------НОВИНИ КІНЕЦЬ
 }
 
 @media (max-width: 550px) {
@@ -877,26 +1004,31 @@ footer {
   .content {
     width: 320px !important;
   }
+
   header {
     .header {
       h1 {
         font-size: 2rem !important;
       }
+
       h2 {
         font-size: 1.6rem !important;
       }
     }
+
     .menu {
       nav {
         padding-left: 10px;
         padding-right: 10px;
       }
+
       ul {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
         li {
+
           &:nth-child(1),
           :nth-child(2),
           :nth-child(3) {
@@ -918,50 +1050,66 @@ footer {
 
   .week {
     .bibli {
-      width: @content_mob !important;
+      width: @content_mob  !important;
+
       .text_bibli {
         width: 100% !important;
         margin-top: 2rem !important;
+
         h2 {
           font-size: 2rem !important;
         }
+
         p {
-          font-size: 2.4rem !important;
+          font-size: 2.1rem !important;
           line-height: 2.8rem !important;
+          padding-left: 1rem;
+          padding-right:1rem;
+          padding-top: 2rem !important;
+        }
+        h3{
+          margin-top: 3rem !important;
         }
       }
     }
   }
 
   .last_worship {
+
     .last_worship_video1,
     .last_worship_video2 {
       width: 35rem !important;
       height: 23rem !important;
+
       .span_mask {
         top: 5rem !important;
         left: 13rem !important;
       }
     }
   }
+
   .last_news {
     .last_news_mini {
       .last_news_mikro {
         //margin-top: 0 !important;
         width: 95% !important;
         height: 20rem;
+
         img {
           width: 16rem;
         }
+
         p {
           width: 19rem;
           line-height: 1.5rem;
           font-size: 12px;
         }
+
         span {
           font-size: 8px;
           margin: 12rem 4.5rem;
         }
+
         a {
           font-size: 11px;
           width: 11rem;
@@ -970,6 +1118,7 @@ footer {
         }
       }
     }
+
     .more_news {
       margin-top: 2rem;
     }
@@ -981,32 +1130,52 @@ footer {
       grid-template-columns: 1fr 1fr !important;
     }
   }
+
   .article {
+
     .articles1,
     .articles2 {
       width: 95% !important;
       height: 160px !important;
     }
   }
+
   .good_link {
     .good_link_wrap {
       flex-direction: column;
+
       div {
         margin-top: 7rem;
       }
     }
   }
+
   footer {
     .routine {
       flex-direction: column;
       margin: 0 auto;
+
       .routine_mini {
         margin: 0 auto;
         margin-top: 5rem;
+
         p {
           font-size: 1.6rem;
         }
       }
     }
   }
+
+  //------НОВИНИ
+  .news_divs {
+    width: 320px !important;
+    grid-template-columns: 1fr !important;
+
+    .news_div {
+      width: 95% !important;
+      height: 29rem !important;
+    }
+  }
+
+  //------НОВИНИ КІНЕЦЬ
 }
