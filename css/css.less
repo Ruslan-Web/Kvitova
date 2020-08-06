@@ -311,7 +311,7 @@ header {
       margin-bottom: 3rem;
       text-decoration: none;
       text-align: center;
-      width: 45rem;
+      width: 42rem;
       position: relative;
 
       .last_worship_img {
@@ -724,25 +724,33 @@ footer {
   }
 }
 
-
 //---------------------------------НОВИНИ
 
 .bag_photo {
-  height: 10rem;
-  background: #F6BD28;
+  //height: 10rem;
+  background: #f6bd28;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
   h1 {
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     color: #fff;
+  }
+  span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
   }
 }
 
 .news {
   min-height: 875px;
-  background: #F1F1F1;
+  background: #f1f1f1;
   padding-bottom: 5rem;
 
   .news_divs {
@@ -753,7 +761,6 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
 
     .news_div {
-
       width: 42rem;
       height: 32rem;
       display: flex;
@@ -763,10 +770,9 @@ footer {
       justify-self: center;
 
       .news_div_text {
-
         width: 100%;
         height: 9.5rem;
-        background: #F6BD28;
+        background: #f6bd28;
         align-self: flex-end;
         text-align: center;
         display: flex;
@@ -782,11 +788,9 @@ footer {
           margin-top: 2.5rem;
           align-self: center;
           font-weight: 600;
-
         }
 
         p {
-
           font-size: 1.7em;
           color: #fff;
           margin-top: 1rem;
@@ -806,11 +810,200 @@ footer {
         left: 0;
       }
     }
-
   }
 }
 
 //---------------------------------НОВИНИ КІНЕЦЬ
+
+//--------------------------------ІСТОРІЇ
+.text_start_history_text_wrap {
+  background: #f1f1f1;
+  .text_start_history_text {
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+    p {
+      margin: 0;
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-align: justify;
+    }
+  }
+}
+
+.photo_history_wrap {
+  background: #f1f1f1;
+  .photo_history_1,
+  .photo_history_2 {
+    img {
+      width: 42rem;
+    }
+  }
+  .photo_history_1 {
+    padding-top: 2rem;
+    text-align: center;
+  }
+  .photo_history_2 {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+  }
+  .photo_history_3 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    img {
+      width: 32rem;
+    }
+  }
+  .photo_history_all {
+    border-top: 1px solid #f9bd28;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 2rem;
+    img {
+      width: 23rem;
+      justify-self: center;
+    }
+  }
+  .text_end_history {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 3rem;
+    .text_end_history_text {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      text-align: justify;
+    }
+    .user {
+      justify-self: end;
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      span {
+        display: inline-block;
+        width: 2.2rem;
+        height: 2.2rem;
+        background: #f6bd28;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      p {
+        margin-left: 10px;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+    }
+  }
+  .text_end_history {
+    .look_more {
+      display: none;
+    }
+  }
+}
+
+.video_history_wrap {
+  background: #f1f1f1;
+  padding-bottom: 3rem;
+  .video_history {
+    display: flex;
+    height: 350px;
+    .video_history_big {
+      position: relative;
+      height: 100%;
+      a {
+        height: 100%;
+        display: inline-block;
+        img {
+          height: 100%;
+        }
+        span {
+          position: absolute;
+          width: 10rem;
+          height: 10rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background: rgba(0, 0, 0, 0.52);
+          z-index: 99;
+          top: 11rem;
+          left: 26rem;
+          margin: 0;
+
+          img {
+            width: 7rem;
+            height: 7rem;
+          }
+        }
+      }
+    }
+    .video_history_list {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      margin-left: 2rem;
+      overflow: auto;
+      .active {
+        background: #f9be2838;
+      }
+      div {
+        position: relative;
+        cursor: pointer;
+        height: 108px;
+        display: flex;
+        margin-bottom: 1.5rem;
+        img {
+          height: 100%;
+          width: 180px;
+        }
+        p {
+          line-height: 1.3rem;
+          font-size: 1.2rem;
+          font-weight: 700;
+          margin-left: 1rem;
+          margin-right: 1rem;
+          margin-top: 2rem;
+        }
+        span {
+          position: absolute;
+          width: 5rem;
+          height: 5rem;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background: rgba(0, 0, 0, 0.52);
+          z-index: 99;
+          top: 3rem;
+          left: 6.5rem;
+          margin: 0;
+
+          img {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+      }
+      .none span {
+        display: flex;
+      }
+    }
+  }
+}
+
+//--------------------------------ІСТОРІЇ КІНЕЦЬ
 
 ////-------------------------------------------------------
 @media (max-width: 1345px) {
@@ -821,8 +1014,6 @@ footer {
 }
 
 @media (max-width: 980px) {
-
-
   .content {
     width: 550px !important;
   }
@@ -839,7 +1030,6 @@ footer {
       justify-content: space-between !important;
 
       li {
-
         &:nth-child(1),
         &:nth-child(2),
         &:nth-child(3) {
@@ -866,7 +1056,7 @@ footer {
 
   .week {
     .bibli {
-      width: @content_tab  !important;
+      width: @content_tab !important;
       min-width: 320px;
 
       .skobka {
@@ -994,6 +1184,34 @@ footer {
   }
 
   //------НОВИНИ КІНЕЦЬ
+
+  //-------ІСТОРІЇ
+
+  .photo_history_2 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0rem !important;
+    img {
+      margin: 0 auto;
+      margin-top: 2rem;
+    }
+  }
+
+  .photo_history_3 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0rem !important;
+    img {
+      margin: 0 auto;
+      margin-top: 2rem;
+      width: 45rem !important;
+    }
+  }
+
+  .photo_history_all {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  //-------ІСТОРІЇ КІНЕЦЬ
 }
 
 @media (max-width: 550px) {
@@ -1028,7 +1246,6 @@ footer {
         justify-content: space-between;
 
         li {
-
           &:nth-child(1),
           :nth-child(2),
           :nth-child(3) {
@@ -1050,7 +1267,7 @@ footer {
 
   .week {
     .bibli {
-      width: @content_mob  !important;
+      width: @content_mob !important;
 
       .text_bibli {
         width: 100% !important;
@@ -1064,10 +1281,10 @@ footer {
           font-size: 2.1rem !important;
           line-height: 2.8rem !important;
           padding-left: 1rem;
-          padding-right:1rem;
+          padding-right: 1rem;
           padding-top: 2rem !important;
         }
-        h3{
+        h3 {
           margin-top: 3rem !important;
         }
       }
@@ -1075,7 +1292,6 @@ footer {
   }
 
   .last_worship {
-
     .last_worship_video1,
     .last_worship_video2 {
       width: 35rem !important;
@@ -1132,7 +1348,6 @@ footer {
   }
 
   .article {
-
     .articles1,
     .articles2 {
       width: 95% !important;
@@ -1178,4 +1393,47 @@ footer {
   }
 
   //------НОВИНИ КІНЕЦЬ
+
+  //-------ІСТОРІЇ
+
+  .photo_history_1,
+  .photo_history_2,
+  .photo_history_3 {
+    img {
+      width: 35rem !important;
+      height: 21rem !important;
+    }
+  }
+
+  .photo_history_all {
+    grid-template-columns: 1fr !important;
+    img {
+      width: 35rem !important;
+      height: 21rem !important;
+    }
+  }
+  .photo_history {
+    height: 600px;
+    overflow: hidden;
+    transition: height 4s ease;
+  }
+  .text_end_history {
+    .look_more {
+      align-items: center;
+      justify-content: center;
+      display: flex !important;
+      width: 230px;
+      height: 30px;
+      background: #f9bd28;
+      border-radius: 6px;
+      margin: 0 auto;
+      font-size: 14px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 4rem;
+      border: none;
+    }
+  }
+  //-------ІСТОРІЇ КІНЕЦЬ
 }

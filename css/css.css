@@ -249,7 +249,7 @@ header .menu nav ul .m-menu-link {
   margin-bottom: 3rem;
   text-decoration: none;
   text-align: center;
-  width: 45rem;
+  width: 42rem;
   position: relative;
 }
 .last_worship .last_worship_video .last_worship_video1 .last_worship_img,
@@ -597,19 +597,27 @@ footer .footers p {
   font-weight: 600;
 }
 .bag_photo {
-  height: 10rem;
-  background: #F6BD28;
+  background: #f6bd28;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .bag_photo h1 {
-  font-size: 2.7rem;
+  font-size: 2.4rem;
   color: #fff;
+}
+.bag_photo span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
 }
 .news {
   min-height: 875px;
-  background: #F1F1F1;
+  background: #f1f1f1;
   padding-bottom: 5rem;
 }
 .news .news_divs {
@@ -631,7 +639,7 @@ footer .footers p {
 .news .news_divs .news_div .news_div_text {
   width: 100%;
   height: 9.5rem;
-  background: #F6BD28;
+  background: #f6bd28;
   align-self: flex-end;
   text-align: center;
   display: flex;
@@ -663,6 +671,184 @@ footer .footers p {
   width: 100%;
   top: 0;
   left: 0;
+}
+.text_start_history_text_wrap {
+  background: #f1f1f1;
+}
+.text_start_history_text_wrap .text_start_history_text {
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
+}
+.text_start_history_text_wrap .text_start_history_text p {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: justify;
+}
+.photo_history_wrap {
+  background: #f1f1f1;
+}
+.photo_history_wrap .photo_history_1 img,
+.photo_history_wrap .photo_history_2 img {
+  width: 42rem;
+}
+.photo_history_wrap .photo_history_1 {
+  padding-top: 2rem;
+  text-align: center;
+}
+.photo_history_wrap .photo_history_2 {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2rem;
+}
+.photo_history_wrap .photo_history_3 {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+.photo_history_wrap .photo_history_3 img {
+  width: 32rem;
+}
+.photo_history_wrap .photo_history_all {
+  border-top: 1px solid #f9bd28;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 2rem;
+}
+.photo_history_wrap .photo_history_all img {
+  width: 23rem;
+  justify-self: center;
+}
+.photo_history_wrap .text_end_history {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 3rem;
+}
+.photo_history_wrap .text_end_history .text_end_history_text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: justify;
+}
+.photo_history_wrap .text_end_history .user {
+  justify-self: end;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.photo_history_wrap .text_end_history .user span {
+  display: inline-block;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: #f6bd28;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo_history_wrap .text_end_history .user p {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.photo_history_wrap .text_end_history .look_more {
+  display: none;
+}
+.video_history_wrap {
+  background: #f1f1f1;
+  padding-bottom: 3rem;
+}
+.video_history_wrap .video_history {
+  display: flex;
+  height: 350px;
+}
+.video_history_wrap .video_history .video_history_big {
+  position: relative;
+  height: 100%;
+}
+.video_history_wrap .video_history .video_history_big a {
+  height: 100%;
+  display: inline-block;
+}
+.video_history_wrap .video_history .video_history_big a img {
+  height: 100%;
+}
+.video_history_wrap .video_history .video_history_big a span {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.52);
+  z-index: 99;
+  top: 11rem;
+  left: 26rem;
+  margin: 0;
+}
+.video_history_wrap .video_history .video_history_big a span img {
+  width: 7rem;
+  height: 7rem;
+}
+.video_history_wrap .video_history .video_history_list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin-left: 2rem;
+  overflow: auto;
+}
+.video_history_wrap .video_history .video_history_list .active {
+  background: #f9be2838;
+}
+.video_history_wrap .video_history .video_history_list div {
+  position: relative;
+  cursor: pointer;
+  height: 108px;
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.video_history_wrap .video_history .video_history_list div img {
+  height: 100%;
+  width: 180px;
+}
+.video_history_wrap .video_history .video_history_list div p {
+  line-height: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+}
+.video_history_wrap .video_history .video_history_list div span {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.52);
+  z-index: 99;
+  top: 3rem;
+  left: 6.5rem;
+  margin: 0;
+}
+.video_history_wrap .video_history .video_history_list div span img {
+  width: 3rem;
+  height: 3rem;
+}
+.video_history_wrap .video_history .video_history_list .none span {
+  display: flex;
 }
 @media (max-width: 1345px) {
   .news_divs {
@@ -784,6 +970,28 @@ footer .footers p {
   .news_divs {
     width: 550px !important;
     grid-template-columns: 1fr !important;
+  }
+  .photo_history_2 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0rem !important;
+  }
+  .photo_history_2 img {
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+  .photo_history_3 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0rem !important;
+  }
+  .photo_history_3 img {
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 45rem !important;
+  }
+  .photo_history_all {
+    grid-template-columns: 1fr 1fr !important;
   }
 }
 @media (max-width: 550px) {
@@ -908,5 +1116,39 @@ footer .footers p {
   .news_divs .news_div {
     width: 95% !important;
     height: 29rem !important;
+  }
+  .photo_history_1 img,
+  .photo_history_2 img,
+  .photo_history_3 img {
+    width: 35rem !important;
+    height: 21rem !important;
+  }
+  .photo_history_all {
+    grid-template-columns: 1fr !important;
+  }
+  .photo_history_all img {
+    width: 35rem !important;
+    height: 21rem !important;
+  }
+  .photo_history {
+    height: 600px;
+    overflow: hidden;
+    transition: height 4s ease;
+  }
+  .text_end_history .look_more {
+    align-items: center;
+    justify-content: center;
+    display: flex !important;
+    width: 230px;
+    height: 30px;
+    background: #f9bd28;
+    border-radius: 6px;
+    margin: 0 auto;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    border: none;
   }
 }
