@@ -86,7 +86,7 @@
                     </span>
                     <p>"1Меншість впливає на більшість" Сергій Вознюк // 19.07.2020</p>
                 </div>
-                <div>
+                <!-- <div>
                     <img src="img/photo-bibli.png" alt="" />
                     <span>
                         <img src="img/play-button-1.png" alt="" />
@@ -106,22 +106,23 @@
                         <img src="img/play-button-1.png" alt="" />
                     </span>
                     <p>"Меншість впливає на більшість" Сергій Вознюк // 19.07.2020</p>
-                </div> 
-
+                </div> -->
 
             </div>
     </section>
 
     <section class="photo_history_wrap">
-        <div class="photo_history content photo_history_all">
+        <button href="" class="look_more_video">Переглянути більше</button>
+        <div class="photo_history content photo_history_3">
+
             <img src="img/photo-drozd.png" alt="">
             <img src="img/photo-drozd.png" alt="">
             <img src="img/photo-drozd.png" alt="">
+            <!-- <img src="img/photo-drozd.png" alt="">
             <img src="img/photo-drozd.png" alt="">
             <img src="img/photo-drozd.png" alt="">
             <img src="img/photo-drozd.png" alt="">
-            <img src="img/photo-drozd.png" alt="">
-            <img src="img/photo-drozd.png" alt="">
+            <img src="img/photo-drozd.png" alt=""> -->
 
         </div>
 
@@ -244,32 +245,37 @@
 
 
         //СКРОЛ ЖОВТОГО КОЛЬОРУ
-        $(document).ready(
-            function () {
-                $(".video_history_list").niceScroll({
-                    cursorcolor: "#f9bd28",
-                    background: "#D6D6D6",
-                    autohidemode: "false",
-                    cursorborder: "none",
-                    cursorborderradius: "none",
+        if (w > 980) {
+            $(document).ready(
+                function () {
+                    $(".video_history_list").niceScroll({
+                        cursorcolor: "#f9bd28",
+                        background: "#D6D6D6",
+                        autohidemode: "false",
+                        cursorborder: "none",
+                        cursorborderradius: "none",
+                    });
                 });
-            });
-
+        }
 
 
         // ЗЯВЛЕННЯ СТРІЛКИ НА МАЛЕНЬКИХ ВІДЕО
         let div = document.querySelectorAll('.video_history_list div');
+        if (w > 980) {
 
-        for (let i = 0; i < div.length; i++) {
-            div[i].addEventListener('mouseover', function (event) {
-                event.currentTarget.classList.add('none');
-            });
+
+            for (let i = 0; i < div.length; i++) {
+                div[i].addEventListener('mouseover', function (event) {
+                    event.currentTarget.classList.add('none');
+                });
+            }
+            for (let i = 0; i < div.length; i++) {
+                div[i].addEventListener('mouseout', function (event) {
+                    event.currentTarget.classList.remove('none');
+                });
+            }
         }
-        for (let i = 0; i < div.length; i++) {
-            div[i].addEventListener('mouseout', function (event) {
-                event.currentTarget.classList.remove('none');
-            });
-        }
+
 
         //ВСТАВКА ВЕЛИКОГО ВІДЕО ПРИ ЗАГРУЗЦІ
         let image_big = document.querySelector('.video_history_big a img');
@@ -297,6 +303,66 @@
         }
 
 
+        //УМОВИ ПОКАЗУ КНОПКИ ПІД ФОТО
+
+        let sum_el = document.querySelector('.photo_history_wrap div');
+
+        if (w < 550) {
+            if (sum_el.classList == 'photo_history content photo_history_1') {
+                look_more.style.display = 'none';
+            } else if (sum_el.classList == 'photo_history content photo_history_2') {
+                look_more.style.display = 'none';
+            } else if (sum_el.classList == 'photo_history content photo_history_3') {
+                look_more.style.display = 'none';
+            } else {
+                look_more.style.display = 'flex';
+            }
+
+        }
+
+        //УМОВИ ПОКАЗУ КНОПКИ ПІД ВІДЕО І ВИСОТА БЛОКУ
+
+        let sum_video = document.querySelectorAll('.video_history_list div');
+        let look_more_video = document.querySelector('.look_more_video');
+        let video_history = document.querySelector('.video_history');
+        if (w < 980) {
+            if (sum_video.length > 3) {
+                look_more_video.style.display = 'flex';
+            } else {
+                look_more_video.style.display = 'none';
+                if (sum_video.length == 2) {
+                    video_history.style.height = '630px'
+                } else if (sum_video.length == 1) {
+                    video_history.style.height = '30rem'
+                }
+            }
+        }
+
+        // ВИСОТА БЛОКУ З  ВІДЕО
+
+        let look_bool_video = true;
+        look_more_video.addEventListener('click', function () {
+            if (look_bool_video) {
+                video_history.style.height = 'unset';
+                look_bool_video = false;
+            } else {
+                video_history.style.height = '930px';
+                look_bool_video = true;
+            }
+        })
+
+
+
+        //ЯКЩО ОДНЕ ВІДЕО ТО СТАВИТЬСЯ ПОСЕРЕДИНІ
+        let video_history_list = document.querySelector('.video_history_list');
+        let video_history_big = document.querySelector('.video_history_big');
+
+        if (w > 980) {
+            if (sum_video.length == 1) {
+                video_history_list.style.display = 'none';
+                video_history_big.style.margin = '0 auto';
+            }
+        }
 
 
 
