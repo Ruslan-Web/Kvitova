@@ -86,7 +86,7 @@
                     </span>
                     <p>"1Меншість впливає на більшість" Сергій Вознюк // 19.07.2020</p>
                 </div>
-                <!-- <div>
+                <div>
                     <img src="img/photo-bibli.png" alt="" />
                     <span>
                         <img src="img/play-button-1.png" alt="" />
@@ -106,23 +106,23 @@
                         <img src="img/play-button-1.png" alt="" />
                     </span>
                     <p>"Меншість впливає на більшість" Сергій Вознюк // 19.07.2020</p>
-                </div> -->
+                </div>
 
             </div>
     </section>
 
     <section class="photo_history_wrap">
         <button href="" class="look_more_video">Переглянути більше</button>
-        <div class="photo_history content photo_history_3">
+        <div class="photo_history content photo_history_all">
 
             <img src="img/photo-drozd.png" alt="">
             <img src="img/photo-drozd.png" alt="">
             <img src="img/photo-drozd.png" alt="">
-            <!-- <img src="img/photo-drozd.png" alt="">
             <img src="img/photo-drozd.png" alt="">
             <img src="img/photo-drozd.png" alt="">
             <img src="img/photo-drozd.png" alt="">
-            <img src="img/photo-drozd.png" alt=""> -->
+            <img src="img/photo-drozd.png" alt="">
+            <img src="img/photo-drozd.png" alt="">
 
         </div>
 
@@ -353,33 +353,53 @@
 
 
 
-        //ЯКЩО ОДНЕ ВІДЕО ТО СТАВИТЬСЯ ПОСЕРЕДИНІ
-        let video_history_list = document.querySelector('.video_history_list');
-        let video_history_big = document.querySelector('.video_history_big');
 
-        if (w > 980) {
-            if (sum_video.length == 1) {
-                video_history_list.style.display = 'none';
-                video_history_big.style.margin = '0 auto';
-            }
-        }
+        // $(document).ready(function () {
 
 
-
-        // div.addEventListener('mouseout', function () {
-        //     span.style.display = 'none';
-        // })
-        // let photo_history = document.querySelectorAll('.photo_history img');
-        // if (w < 550) {
-        //     for (let i = 2; i < photo_history.length; i++) {
-        //         photo_history[i].style.display='none';
-        //     }
-        // }
-
-        //   $(document).ready(function(){    //Після загрузки сторінки
-        //     $('body .m-menu').html($('.menu nav ul').html());
+        //             $(".look_more_video").click(
+        //                 function () {
+        //                     if (look_bool_video) {
+        //                         $(".video_history").slideDown();
+        //                         look_bool_video = false;
+        //                     } else {
+        //                         $(".video_history").slideUp();
+                                
+        //                         look_bool_video = true;
+        //                     }
+        //                 });
         // });
-        //let body=document.querySelector('body');
+
+
+
+
+                //ЯКЩО ОДНЕ ВІДЕО ТО СТАВИТЬСЯ ПОСЕРЕДИНІ
+                let video_history_list = document.querySelector('.video_history_list');
+                let video_history_big = document.querySelector('.video_history_big');
+
+                if (w > 980) {
+                    if (sum_video.length == 1) {
+                        video_history_list.style.display = 'none';
+                        video_history_big.style.margin = '0 auto';
+                    }
+                }
+
+
+
+                // div.addEventListener('mouseout', function () {
+                //     span.style.display = 'none';
+                // })
+                // let photo_history = document.querySelectorAll('.photo_history img');
+                // if (w < 550) {
+                //     for (let i = 2; i < photo_history.length; i++) {
+                //         photo_history[i].style.display='none';
+                //     }
+                // }
+
+                //   $(document).ready(function(){    //Після загрузки сторінки
+                //     $('body .m-menu').html($('.menu nav ul').html());
+                // });
+                //let body=document.querySelector('body');
     </script>
 </body>
 

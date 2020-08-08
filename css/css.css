@@ -858,10 +858,121 @@ footer .footers p {
 .video_history_wrap .video_history .video_history_list .none span {
   display: flex;
 }
+.contact_wrap {
+  background: #f1f1f1;
+}
+.contact_wrap .contact {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  display: flex;
+}
+.contact_wrap .contact .map {
+  position: relative;
+  width: 64rem;
+}
+.contact_wrap .contact .map .img_map {
+  width: 100%;
+  height: 100%;
+}
+.contact_wrap .contact .map span {
+  top: 16rem;
+  left: 34rem;
+  position: absolute;
+  width: 8.5rem;
+  height: 8.5em;
+  border-radius: 50%;
+  background: #f6bc285b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact_wrap .contact .map span span {
+  top: 2.3rem;
+  left: 2.3rem;
+  width: 4rem;
+  height: 4rem;
+  background: #f6bd28;
+}
+.contact_wrap .contact .contact_numbers {
+  display: flex;
+  margin-left: 3rem;
+}
+.contact_wrap .contact .contact_numbers .contact_number1 {
+  background: #d6d6d6;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contact_wrap .contact .contact_numbers .contact_number1 .contact_p {
+  text-align: center;
+  width: 115px;
+  margin: 0 auto;
+  margin-top: 14rem ;
+  word-wrap: break-word;
+}
+.contact_wrap .contact .contact_numbers .contact_number1 .contact_p p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.contact_wrap .contact .contact_numbers .contact_number1 span {
+  margin: 0 auto;
+  margin-top: 4rem ;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.contact_wrap .contact .contact_numbers .contact_number1 span span {
+  font-weight: 700;
+}
+.contact_wrap .contact .contact_numbers .contact_number1 .social_map {
+  margin: 0 auto;
+  margin-top: 2rem !important;
+}
+.contact_wrap .contact .contact_numbers .contact_number1 .social_map img {
+  margin-left: 0.5rem;
+}
+.contact_wrap .contact .contact_numbers .contact_number2 {
+  width: 20rem;
+  margin-left: 3rem;
+  padding-top: 8rem;
+}
+.contact_wrap .contact .contact_numbers .contact_number2 .routine_mini {
+  padding-bottom: 3rem;
+}
+.contact_wrap .contact .contact_numbers .contact_number2 .routine_mini span {
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f6bd28;
+}
+.contact_wrap .contact .contact_numbers .contact_number2 .routine_mini p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+}
 @media (max-width: 1345px) {
   .news_divs {
     width: 980px !important;
     grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 1200px) {
+  .contact {
+    flex-direction: column !important;
+    width: 980px !important;
+  }
+  .contact .map {
+    margin: 0 auto;
+  }
+  .contact .contact_numbers {
+    margin: 0 auto !important;
+    margin-top: 4rem !important;
+    width: 640px !important;
+  }
+  .contact .contact_numbers .contact_number1 {
+    height: 410px !important;
   }
 }
 @media (max-width: 980px) {
@@ -1055,6 +1166,28 @@ footer .footers p {
   .video_history_wrap .video_history .video_history_list div p {
     text-align: center;
     font-size: 1.4rem;
+  }
+  .contact {
+    width: 550px !important;
+  }
+  .contact .map {
+    width: 530px !important;
+  }
+  .contact .map span {
+    top: 13rem !important;
+    left: 28rem !important;
+    width: 8rem !important;
+    height: 8em !important;
+  }
+  .contact .map span span {
+    top: 2.1rem !important;
+    left: 2.1rem !important;
+    width: 4rem !important;
+    height: 4rem !important;
+    background: #f6bd28;
+  }
+  .contact .contact_numbers {
+    width: 530px !important;
   }
 }
 @media (max-width: 550px) {
@@ -1259,5 +1392,42 @@ footer .footers p {
   .text_start_history_text p {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  .contact {
+    width: 320px !important;
+  }
+  .contact .map {
+    width: 300px !important;
+  }
+  .contact .map span {
+    top: 9rem !important;
+    left: 18rem !important;
+    width: 5rem !important;
+    height: 5em !important;
+  }
+  .contact .map span span {
+    top: 1.3rem !important;
+    left: 1.3rem !important;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  .contact .map span span img {
+    width: 1.5rem !important;
+  }
+  .contact .contact_numbers {
+    width: 300px !important;
+  }
+  .contact .contact_numbers .contact_number2 {
+    display: none !important;
+  }
+  .contact .contact_numbers .contact_number1 {
+    background: none !important;
+    height: 150px !important;
+  }
+  .contact .contact_numbers .contact_number1 .contact_p {
+    margin-top: 0rem !important;
+  }
+  .contact .contact_numbers .contact_number1 span {
+    margin-top: 0 !important;
   }
 }
